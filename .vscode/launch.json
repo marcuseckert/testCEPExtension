@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "extendscript-debug",
+            "request": "launch",
+            "name": "Extend Script Debug Main",
+            "script": "${workspaceFolder}/demo/debugMain.jsx",
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "CEP JavaScript",
+            "port": 9001,   // <-- Whatever debug port you have configured.
+            "webRoot": "${workspaceRoot}",
+            "pathMapping": {
+                "/": "${workspaceRoot}"
+            }
+        },
+        {
+            "type": "extendscript-debug",
+            "request": "attach",
+            "name": "CEP ExtendScript",
+            "hostAppSpecifier": "aftereffects-23.0"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Debug CEP",
+            "configurations": [
+                "CEP JavaScript",
+                "CEP ExtendScript"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<ExtensionManifest Version="6.0" ExtensionBundleId="co.forgeandform.tempEx"  ExtensionBundleVersion="1.0"
+		ExtensionBundleName="TextEx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+		<Extension Id="co.forgeandform.tempEx.ex1" Version="1.0" />
+	</ExtensionList>
+    
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="13.0" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="6.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+    
+	<DispatchInfoList>
+		<Extension Id="co.forgeandform.tempEx.ex1">
+			<DispatchInfo >
+				<Resources>
+                    <MainPath>./index.html</MainPath>
+                    <ScriptPath>./lib/MainScript.jsx</ScriptPath>
+<CEFCommandLine>
+  <Parameter>--enable-nodejs</Parameter>
+  <Parameter>--mixed-context</Parameter>
+</CEFCommandLine>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+<StartOn>
+<Event>applicationActivate</Event>
+<Event>documentAfterSave</Event>
+</StartOn>
+
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>TextEx</Menu>
+					<Geometry>
+						<Size>
+							<Height>100</Height>
+							<Width>350</Width>
+						</Size>
+						<MaxSize>
+							<Height>500</Height>
+							<Width>500</Width>
+						</MaxSize>
+						<MinSize>
+							<Height>100</Height>
+							<Width>350</Width>
+						</MinSize>
+					</Geometry>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>

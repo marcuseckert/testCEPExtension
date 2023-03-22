@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'" />
+
+    <script src="./lib/CSInterface.js"></script>
+    <script src="./lib/testExt.js"></script>
+
+</head>
+
+
+<body onLoad="TestExt.didLoad()" style="background-color:#262626" >
+  Temp Extension 
+<button onclick="TestExt.didClick()">Tap Me to run some Extend script</button>
+</body>
+
+</html>
