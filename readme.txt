@@ -1,9 +1,3 @@
-
-
-Run npm install
-Python will sometimes ask to set terminal.integrated.inheritEnv to false in VSCode but it should inherit the env. Then use CMD+Shift+B to build.
-
-set debugMode to 1 for AE:
-e.g: defaults write com.adobe.CSXS.9 PlayerDebugMode 1
-(The plist is also located at /Users/<username>/Library/Preferences/com.adobe.CSXS.9.plist)
-Could also be CSXS10 or so
+Hey,
+so I have a problem with AE and VSCode not hitting breakpoints when debugging ExtendScript. When I "attach" to the main extend script engine and trigger script evaluation from the regular Javascript engine, $.writeln correctly writes to the output console but breakpoints are not honored. If I use "launch" and just evaluate a script, it works. My setup is as follows:
+MacBook Pro M1 Max, Ventura 13.2.1, AE 2023
